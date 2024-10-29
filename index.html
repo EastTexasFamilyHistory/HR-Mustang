@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head section remains the same -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustang Genetics Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-horse-head"></i> Mustang Genetics Calculator</h1>
+        
+        <div class="parent-section">
+            <h2 class="section-title"><i class="fas fa-venus"></i> Dam Genes</h2>
+            
+            <!-- Base Color Genes -->
+            <div class="gene-category">
+                <h3 class="category-title">Base Color</h3>
+                <div class="gene-inputs">
+                    <div class="gene-input">
+                        <label for="dam-extension">Extension (E)</label>
+                        <select id="dam-extension">
+                            <option value="">Unknown</option>
+                            <option value="E/E">E/E (Black)</option>
+                            <option value="E/e">E/e (Black)</option>
+                            <option value="e/e">e/e (Red)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="dam-agouti">Agouti (A)</label>
+                        <select id="dam-agouti">
+                            <option value="">Unknown</option>
+                            <option value="A+/A+">A<sup>+</sup>/A<sup>+</sup> (Wild Bay)</option>
+                            <option value="A+/A">A<sup>+</sup>/A (Wild Bay)</option>
+                            <option value="A+/a">A<sup>+</sup>/a (Wild Bay)</option>
+                            <option value="A/A">A/A (Bay)</option>
+                            <option value="A/a">A/a (Bay)</option>
+                            <option value="At/At">A<sup>t</sup>/A<sup>t</sup> (Seal Bay)</option>
+                            <option value="At/A">A<sup>t</sup>/A (Seal Bay)</option>
+                            <option value="At/a">A<sup>t</sup>/a (Seal Bay)</option>
+                            <option value="a/a">a/a (Black)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dilution Genes -->
+            <div class="gene-category">
+                <h3 class="category-title">Dilution</h3>
+                <div class="gene-inputs">
+                    <div class="gene-input">
+                        <label for="dam-cream" title="Cream/Pearl have a special interaction where CR/prl produces cremello/perlino">Cream/Pearl (CR/prl)</label>
+                        <select id="dam-cream">
+                            <option value="">Unknown</option>
+                            <option value="CR/CR">CR/CR (Double Dilute)</option>
+                            <option value="CR/prl">CR/prl (Pseudo Double Dilute)</option>
+                            <option value="CR/n">CR/n (Single Dilute)</option>
+                            <option value="prl/prl">prl/prl (Pearl)</option>
+                            <option value="prl/n">prl/n (Pearl Carrier)</option>
+                            <option value="n/n">n/n (No Dilution)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="dam-champagne">Champagne (CH)</label>
+                        <select id="dam-champagne">
+                            <option value="">Unknown</option>
+                            <option value="Ch/Ch">Ch/Ch (Champagne)</option>
+                            <option value="Ch/n">Ch/n (Champagne)</option>
+                            <option value="n/n">n/n (No Champagne)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="dam-dun">Dun (D)</label>
+                        <select id="dam-dun">
+                            <option value="">Unknown</option>
+                            <option value="D/D">D/D (Dun)</option>
+                            <option value="D/n">D/n (Dun)</option>
+                            <option value="n/n">n/n (No Dun)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="dam-silver">Silver (Z)</label>
+                        <select id="dam-silver">
+                            <option value="">Unknown</option>
+                            <option value="Z/Z">Z/Z (Silver)</option>
+                            <option value="Z/n">Z/n (Silver)</option>
+                            <option value="n/n">n/n (No Silver)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pattern Genes -->
+            <div class="gene-category">
+                <h3 class="category-title">Pattern</h3>
+                <div class="gene-inputs">
+                    <div class="gene-input">
+                        <label for="dam-overo" title="Homozygous Overo is lethal">Overo (O<sup>lw</sup>)</label>
+                        <select id="dam-overo">
+                            <option value="">Unknown</option>
+                            <option value="Olw/Olw">O<sup>lw</sup>/O<sup>lw</sup> (Lethal)</option>
+                            <option value="Olw/n">O<sup>lw</sup>/n (Overo)</option>
+                            <option value="n/n">n/n (No Overo)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="dam-tobiano">Tobiano (TO)</label>
+                        <select id="dam-tobiano">
+                            <option value="">Unknown</option>
+                            <option value="TO/TO">TO/TO (Tobiano)</option>
+                            <option value="TO/n">TO/n (Tobiano)</option>
+                            <option value="n/n">n/n (No Tobiano)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="dam-roan">Roan (RN)</label>
+                        <select id="dam-roan">
+                            <option value="">Unknown</option>
+                            <option value="RN/RN">RN/RN (Roan)</option>
+                            <option value="RN/n">RN/n (Roan)</option>
+                            <option value="n/n">n/n (No Roan)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Genes -->
+            <div class="gene-category">
+                <h3 class="category-title">Hidden Genes</h3>
+                <div class="gene-inputs">
+                    <div class="gene-input">
+                        <label for="dam-flaxen">Flaxen (f)</label>
+                        <select id="dam-flaxen">
+                            <option value="">Unknown</option>
+                            <option value="f/f">f/f (Flaxen)</option>
+                            <option value="F/f">F/f (No Flaxen)</option>
+                            <option value="F/F">F/F (No Flaxen)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="dam-sooty">Sooty (STY)</label>
+                        <select id="dam-sooty">
+                            <option value="">Unknown</option>
+                            <option value="STY/STY">STY/STY (Sooty)</option>
+                            <option value="STY/n">STY/n (Sooty)</option>
+                            <option value="n/n">n/n (No Sooty)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="dam-pangare">Pangare (PG)</label>
+                        <select id="dam-pangare">
+                            <option value="">Unknown</option>
+                            <option value="PG/PG">PG/PG (Pangare)</option>
+                            <option value="PG/n">PG/n (Pangare)</option>
+                            <option value="n/n">n/n (No Pangare)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="parent-section">
+            <h2 class="section-title"><i class="fas fa-mars"></i> Sire Genes</h2>
+            
+            <!-- Base Color Genes -->
+            <div class="gene-category">
+                <h3 class="category-title">Base Color</h3>
+                <div class="gene-inputs">
+                    <div class="gene-input">
+                        <label for="sire-extension">Extension (E)</label>
+                        <select id="sire-extension">
+                            <option value="">Unknown</option>
+                            <option value="E/E">E/E (Black)</option>
+                            <option value="E/e">E/e (Black)</option>
+                            <option value="e/e">e/e (Red)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="sire-agouti">Agouti (A)</label>
+                        <select id="sire-agouti">
+                            <option value="">Unknown</option>
+                            <option value="A+/A+">A<sup>+</sup>/A<sup>+</sup> (Wild Bay)</option>
+                            <option value="A+/A">A<sup>+</sup>/A (Wild Bay)</option>
+                            <option value="A+/a">A<sup>+</sup>/a (Wild Bay)</option>
+                            <option value="A/A">A/A (Bay)</option>
+                            <option value="A/a">A/a (Bay)</option>
+                            <option value="At/At">A<sup>t</sup>/A<sup>t</sup> (Seal Bay)</option>
+                            <option value="At/A">A<sup>t</sup>/A (Seal Bay)</option>
+                            <option value="At/a">A<sup>t</sup>/a (Seal Bay)</option>
+                            <option value="a/a">a/a (Black)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dilution Genes -->
+            <div class="gene-category">
+                <h3 class="category-title">Dilution</h3>
+                <div class="gene-inputs">
+                    <div class="gene-input">
+                        <label for="sire-cream" title="Cream/Pearl have a special interaction where CR/prl produces cremello/perlino">Cream/Pearl (CR/prl)</label>
+                        <select id="sire-cream">
+                            <option value="">Unknown</option>
+                            <option value="CR/CR">CR/CR (Double Dilute)</option>
+                            <option value="CR/prl">CR/prl (Pseudo Double Dilute)</option>
+                            <option value="CR/n">CR/n (Single Dilute)</option>
+                            <option value="prl/prl">prl/prl (Pearl)</option>
+                            <option value="prl/n">prl/n (Pearl Carrier)</option>
+                            <option value="n/n">n/n (No Dilution)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="sire-champagne">Champagne (CH)</label>
+                        <select id="sire-champagne">
+                            <option value="">Unknown</option>
+                            <option value="Ch/Ch">Ch/Ch (Champagne)</option>
+                            <option value="Ch/n">Ch/n (Champagne)</option>
+                            <option value="n/n">n/n (No Champagne)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="sire-dun">Dun (D)</label>
+                        <select id="sire-dun">
+                            <option value="">Unknown</option>
+                            <option value="D/D">D/D (Dun)</option>
+                            <option value="D/n">D/n (Dun)</option>
+                            <option value="n/n">n/n (No Dun)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="sire-silver">Silver (Z)</label>
+                        <select id="sire-silver">
+                            <option value="">Unknown</option>
+                            <option value="Z/Z">Z/Z (Silver)</option>
+                            <option value="Z/n">Z/n (Silver)</option>
+                            <option value="n/n">n/n (No Silver)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pattern Genes -->
+            <div class="gene-category">
+                <h3 class="category-title">Pattern</h3>
+                <div class="gene-inputs">
+                    <div class="gene-input">
+                        <label for="sire-overo" title="Homozygous Overo is lethal">Overo (O<sup>lw</sup>)</label>
+                        <select id="sire-overo">
+                            <option value="">Unknown</option>
+                            <option value="Olw/Olw">O<sup>lw</sup>/O<sup>lw</sup> (Lethal)</option>
+                            <option value="Olw/n">O<sup>lw</sup>/n (Overo)</option>
+                            <option value="n/n">n/n (No Overo)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="sire-tobiano">Tobiano (TO)</label>
+                        <select id="sire-tobiano">
+                            <option value="">Unknown</option>
+                            <option value="TO/TO">TO/TO (Tobiano)</option>
+                            <option value="TO/n">TO/n (Tobiano)</option>
+                            <option value="n/n">n/n (No Tobiano)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="sire-roan">Roan (RN)</label>
+                        <select id="sire-roan">
+                            <option value="">Unknown</option>
+                            <option value="RN/RN">RN/RN (Roan)</option>
+                            <option value="RN/n">RN/n (Roan)</option>
+                            <option value="n/n">n/n (No Roan)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Genes -->
+            <div class="gene-category">
+                <h3 class="category-title">Hidden Genes</h3>
+                <div class="gene-inputs">
+                    <div class="gene-input">
+                        <label for="sire-flaxen">Flaxen (f)</label>
+                        <select id="sire-flaxen">
+                            <option value="">Unknown</option>
+                            <option value="f/f">f/f (Flaxen)</option>
+                            <option value="F/f">F/f (No Flaxen)</option>
+                            <option value="F/F">F/F (No Flaxen)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="sire-sooty">Sooty (STY)</label>
+                        <select id="sire-sooty">
+                            <option value="">Unknown</option>
+                            <option value="STY/STY">STY/STY (Sooty)</option>
+                            <option value="STY/n">STY/n (Sooty)</option>
+                            <option value="n/n">n/n (No Sooty)</option>
+                        </select>
+                    </div>
+                    <div class="gene-input">
+                        <label for="sire-pangare">Pangare (PG)</label>
+                        <select id="sire-pangare">
+                            <option value="">Unknown</option>
+                            <option value="PG/PG">PG/PG (Pangare)</option>
+                            <option value="PG/n">PG/n (Pangare)</option>
+                            <option value="n/n">n/n (No Pangare)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="calculateGenetics()">Calculate Possibilities</button>
+
+        <div id="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
